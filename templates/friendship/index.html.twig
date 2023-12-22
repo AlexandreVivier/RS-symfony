@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FriendshipController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% for friend in friends %}
+            <div class="row">
+                <div class="col-12">
+                    <h1>{{ friend.reciever.id }}</h1>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

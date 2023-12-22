@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Orchestra - Publier
+{% endblock %}
+
+{% block body %}
+    {% if post.id %}
+        <h1>Modifier votre publication :</h1>
+    {% else %}
+        <h1>Exprimez-vous !</h1>
+    {% endif %}
+
+    {{ form_start(form) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.content) }}
+        {{ form_row(form.category) }}
+        {{ form_row(form.submit) }}
+
+    {{ form_end(form) }}
+{% endblock %}
